@@ -1,0 +1,8 @@
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="project1.controller.Table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    
+</mvc:View>

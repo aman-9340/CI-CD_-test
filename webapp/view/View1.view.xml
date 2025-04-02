@@ -1,0 +1,124 @@
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <App>
+        <Page title="{i18n>title}">
+            <VBox class="sapUiSmallMargin">
+                <f:Form id="FormDisplay"
+                    editable="true">
+                    <f:title>
+                        <core:Title text="{i18n>referralform}" />
+                    </f:title>
+                    <f:layout>
+                        <f:ResponsiveGridLayout
+           labelSpanXL="2" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+            emptySpanXL="4" emptySpanL="4" emptySpanM="2" emptySpanS="4"
+            columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="true"/>
+                    </f:layout>
+                    
+                    <f:formContainers>
+                        <!-- Personal Information -->
+                        <f:FormContainer >
+                            <f:formElements>
+                              <f:FormElement label="{i18n>referralEmployeeId}">
+                                    <f:fields>
+
+                                        <Input id="EmployeeidInput" value="EMP12345" editable="false" required="true" class="customSpacing"/>
+                
+                                
+                                    </f:fields>
+                                </f:FormElement>
+    
+                        <f:FormElement label="{i18n>referralEmpName}" >
+                                    <f:fields>
+
+                                        <Input id="nameInput" value="Abcd" editable="false" required="true" class="customSpacing"/>
+                                
+                                    </f:fields>
+                                </f:FormElement>
+                                
+                                <f:FormElement label="{i18n>referralEmpMobile}">
+                                    <f:fields>
+                                        <Input id="mobileInput" type="Tel" value="9098987675" editable="false" class="customSpacing"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                 <f:FormElement label="{i18n>referralEmpEmail}" class="customSpacing">
+                                    <f:fields>
+                                        <Input id="emailInput" type="Email" value="ak@gmail.com" editable="false" class="customSpacing"/>
+                                    </f:fields>
+                                </f:FormElement>
+                                <f:FormElement label="{i18n>custName}">
+            <f:fields>
+                 <Input id="Custname" type="Email" value="{Email}" required="true" class="customSpacing"/>
+            </f:fields>
+        </f:FormElement>
+
+        <f:FormElement >
+         <f:label>
+        <Label text="{i18n>mobileNo}" required="true"/>  <!-- Label is required -->
+    </f:label>
+           
+     <f:fields>
+            <FlexBox width="26rem">
+            <layout:HorizontalLayout class="customSpacing">
+                <Input id="countryCodeInput"
+                   value="{Country}"
+                   required="true"
+                   placeholder="Select Country Code"
+                   showValueHelp="true"
+                   valueHelpRequest="onValueHelpCountryCode" width="6rem"
+                   valueState="None"
+                   />
+                <Input id="CustMobile"  maxLength="10" type="Tel" value="{}" required="true" width="20rem" valueState="None"/>
+        </layout:HorizontalLayout>
+            </FlexBox>
+            </f:fields>
+        </f:FormElement>
+
+        
+         <f:FormElement label="{i18n>custEmail}">
+            <f:fields>
+                 <Input id="Custemail" type="Email" value="{}" required="true" class="customSpacing"/>
+            </f:fields>
+        </f:FormElement>
+          <f:FormElement label="{i18n>projectCode}">
+            <f:fields>
+                <Select id="projectcode" selectedKey="{Country}" placeholder="Select Project Code" required="true" class="customSpacing">
+                    <items>
+                        <core:Item key="USA" text="001"/>
+                        <core:Item key="UK" text="002"/>
+                        <core:Item key="Germany" text="003"/>
+                    </items>
+                </Select>
+            </f:fields>
+        </f:FormElement>
+         <f:FormElement label="Project Name">
+            <f:fields>
+                <Select id="projectName" selectedKey="{Country}" placeholder="Select project name" required="true" class="customSpacing">
+                    <items>
+                        <core:Item key="USA" text="001"/>
+                        <core:Item key="UK" text="002"/>
+                        <core:Item key="Germany" text="003"/>
+                    </items>
+                </Select>
+            </f:fields>
+        </f:FormElement>
+                                
+                            </f:formElements>
+                        </f:FormContainer>
+                    </f:formContainers>
+                </f:Form>
+            </VBox>
+            <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="Submit"/>
+				
+			</OverflowToolbar>
+		</footer>
+        </Page>
+    </App>
+</mvc:View>
